@@ -50,14 +50,12 @@ export default function StickyElements({ onOpenApply }: StickyElementsProps) {
           </div>
 
           {/* CTA Button */}
-          <a
-            href="https://scale100million.zohobookings.in/#/300029000000208032"
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            onClick={onOpenApply}
             className="inline-block bg-red-600 hover:bg-red-700 active:scale-95 text-white font-extrabold text-sm sm:text-base md:text-lg px-8 sm:px-12 py-3.5 sm:py-4 rounded-full shadow-xl shadow-red-600/20 cursor-pointer transition-all tracking-wide whitespace-nowrap text-center"
           >
             Apply Now
-          </a>
+          </button>
         </div>
 
       </div>

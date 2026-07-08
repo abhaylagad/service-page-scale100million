@@ -33,16 +33,14 @@ export default function WhatWillChangeSection({ onOpenApply }: WhatWillChangeSec
       <div className="max-w-5xl mx-auto flex flex-col items-center text-center">
         
         {/* UPPER RED APPLY NOW BUTTON */}
-        <motion.a
-          href="https://scale100million.zohobookings.in/#/300029000000208032"
-          target="_blank"
-          rel="noopener noreferrer"
+        <motion.button
+          onClick={onOpenApply}
           whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.98 }}
           className="inline-block bg-red-600 hover:bg-red-700 text-white font-bold text-base sm:text-lg px-12 py-4 rounded-full shadow-lg shadow-red-600/20 mb-6 sm:mb-12 cursor-pointer transition-all uppercase tracking-wider text-center"
         >
           Apply Now
-        </motion.a>
+        </motion.button>
 
         {/* BLUE SMALL SUBTITLE */}
         <span className="text-xs sm:text-sm font-extrabold text-blue-600 tracking-[0.2em] uppercase mb-4">

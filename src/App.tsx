@@ -14,7 +14,7 @@ export default function App() {
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
 
   const handleOpenApply = () => {
-    window.open("https://scale100million.zohobookings.in/#/300029000000208032", "_blank", "noopener,noreferrer");
+    setIsApplyModalOpen(true);
   };
 
   const handleCloseApply = () => {
