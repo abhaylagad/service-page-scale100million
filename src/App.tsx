@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import HeroSection from "./components/HeroSection";
 import TestimonialsSection from "./components/TestimonialsSection";
 import BeforeAfterSection from "./components/BeforeAfterSection";
@@ -7,18 +7,20 @@ import WhoThisHelpsSection from "./components/WhoThisHelpsSection";
 import WhatWeCoverSection from "./components/WhatWeCoverSection";
 import FaqSection from "./components/FaqSection";
 import StickyElements from "./components/StickyElements";
-import ApplicationModal from "./components/ApplicationModal";
 import { Sparkles } from "lucide-react";
 
 export default function App() {
-  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
-
   const handleOpenApply = () => {
-    setIsApplyModalOpen(true);
-  };
-
-  const handleCloseApply = () => {
-    setIsApplyModalOpen(false);
+    // Fire Meta Pixel Lead event
+    if (typeof window !== "undefined" && (window as any).fbq) {
+      try {
+        (window as any).fbq("track", "Lead");
+      } catch (err) {
+        console.error("Meta Pixel Error:", err);
+      }
+    }
+    // Open the booking link directly in a new tab
+    window.open("https://scale100million.zohobookings.in/#/300029000000208032", "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -69,9 +71,6 @@ export default function App() {
 
       {/* STICKY COUNTDOWN & CTA BUTTON ELEMENTS */}
       <StickyElements onOpenApply={handleOpenApply} />
-
-      {/* INTERACTIVE APPLICATION modal form */}
-      <ApplicationModal isOpen={isApplyModalOpen} onClose={handleCloseApply} />
     </div>
   );
 }
