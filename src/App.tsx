@@ -7,7 +7,12 @@ import WhoThisHelpsSection from "./components/WhoThisHelpsSection";
 import WhatWeCoverSection from "./components/WhatWeCoverSection";
 import FaqSection from "./components/FaqSection";
 import StickyElements from "./components/StickyElements";
-import { Sparkles } from "lucide-react";
+// ============================================================================
+// SINGLE SOURCE OF TRUTH FOR ALL "APPLY NOW" / BOOKING CTA REDIRECTS
+// Update this URL to change the destination for every button across the entire page
+// ============================================================================
+export const BOOKING_URL =
+  "https://calendly.com/scale100million/business-strategy-call-with-team-scale100million-com-1";
 
 export default function App() {
   const handleOpenApply = () => {
@@ -19,8 +24,8 @@ export default function App() {
         console.error("Meta Pixel Error:", err);
       }
     }
-    // Open the booking link directly in a new tab
-    window.open("https://scale100million.zohobookings.in/#/300029000000208032", "_blank", "noopener,noreferrer");
+    // Redirect to the booking link in the same tab
+    window.location.href = BOOKING_URL;
   };
 
   return (
