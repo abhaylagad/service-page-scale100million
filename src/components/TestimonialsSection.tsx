@@ -53,7 +53,7 @@ export default function TestimonialsSection({ onOpenApply }: TestimonialsSection
       before: "Rs.2L/month",
       after: "Rs.10L/month",
       story: "A service business delivering real results but bottlenecked at the front end, living on referrals. We built the full engine — clear positioning, a proof-driven funnel, and Meta ads that booked decision-makers weekly. In 3 months Conexsent went from Rs.2 lakh to Rs.10 lakh a month.",
-      image: "https://raw.githubusercontent.com/scale100million-prog/my-images/main/helsi.jpeg"
+      image: "https://raw.githubusercontent.com/scale100million-prog/my-images/main/Mark.jfif"
     },
     {
       name: "Harsh Patel — Innovate Tech IT",
@@ -117,7 +117,7 @@ export default function TestimonialsSection({ onOpenApply }: TestimonialsSection
                   <img
                     src={t.image}
                     alt={t.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-center"
                     referrerPolicy="no-referrer"
                   />
                 </div>
